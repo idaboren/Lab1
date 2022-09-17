@@ -1,5 +1,6 @@
 ﻿Console.WriteLine("Mata in en sträng:");
 string input = Console.ReadLine();
+Console.WriteLine();
 long sum = 0;
 
 for (int i = 0; i < input.Length; i++)
@@ -14,8 +15,9 @@ for (int i = 0; i < input.Length; i++)
         {
             // Testa om sifferkombinationen bara innehåller siffror
             string combo = input.Substring(i, endOfCombo - i + 1);
-            bool result = long.TryParse(combo, out long numberSeries);
+            bool result = long.TryParse(combo, out long numberCombo);
 
+            // Om den gör det, skriv ut med sifferkombination i annan färg samt lägg till summan
             if (result)
             {
                 for (int j = 0; j < input.Length; j++)
@@ -33,10 +35,11 @@ for (int i = 0; i < input.Length; i++)
                 }
 
                 Console.WriteLine();
-                sum += numberSeries;
+                sum += numberCombo;
             }
         }
     }
 }
 
+Console.WriteLine();
 Console.WriteLine($"Total: {sum}");
