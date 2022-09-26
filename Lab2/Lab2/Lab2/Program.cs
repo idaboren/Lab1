@@ -1,2 +1,2 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Lab 2: En butik
+Console.WriteLine("Välkommen till butiken!");
